@@ -5,6 +5,8 @@ class Animal {
         System.out.println("Animal makes a sound");
     }
 }
+//method override
+
 
 class Dog extends Animal {
 
