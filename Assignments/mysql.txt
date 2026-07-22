@@ -716,7 +716,7 @@ INTERVIEW / VIVA DEFINITIONS
 ============================================================
 
 Database
-
++
 "A database is an organized collection of related data that
 can be easily accessed, managed, and updated."
 
