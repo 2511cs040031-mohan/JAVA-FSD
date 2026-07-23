@@ -78,3 +78,56 @@ INSERT INTO students (id,COURSE_ID) values (1,1);
 INSERT INTO students (id,COURSE_ID) values (1,4);
 
 ====================================================================
+22-july
+
+
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS customers;
+
+CREATE TABLE orders(
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id)
+    REFERENCES customers(id)
+);
+
+CREATE TABLE customers(
+    id INT PRIMARY KEY,
+    name VARCHAR(10)
+);
+
+INSERT INTO customers(id, name)
+VALUES (1, 'Ajay');
+
+INSERT INTO orders(order_id, customer_id)
+VALUES (100, 1);
+
+===========================================
+
+DROP TABLE IF EXISTS voters;
+
+CREATE TABLE voters (
+    id INT auto_increment PRIMARY KEY,
+        name VARCHAR(10),
+	age INT CHECK (age>=18)
+);
+
+INSERT INTO voters(name,age) values ('AJ',12); 
+INSERT INTO voters(name,age) values ('RAM',13); 
+
+SELECT name as 'voters_name', age as 'voters_age' FROM voters;
+
+================================================
+
+DROP TABLE IF EXISTS voters;
+
+CREATE TABLE voters (
+    id INT auto_increment PRIMARY KEY,
+        name VARCHAR(10),
+	age INT CHECK (age>=18)
+);
+
+INSERT INTO voters(id,name,age) values (1,'AJ',12); 
+INSERT INTO voters(name,age) values (2,'RAM',13);
+
+==========================================================
